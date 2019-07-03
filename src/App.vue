@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <parallax :speed-factor="0.2">
+      <img src="https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg">
+    </parallax>
+    <parallax :speed-factor="0.2">
+      <img src="https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg">
+    </parallax>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Parallax from "vue-parallaxy";
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Parallax
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
