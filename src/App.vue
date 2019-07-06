@@ -1,25 +1,38 @@
 <template>
-  <div>
-    <parallax :speed-factor="0.2">
-      <img src="https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg">
-    </parallax>
-    <parallax :speed-factor="0.2">
-      <img src="https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg">
-    </parallax>
-  </div>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Vuetify</span>
+        <span class="font-weight-light">MATERIAL DESIGN</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        flat
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      >
+        <span class="mr-2">Latest Release</span>
+      </v-btn>
+    </v-toolbar>
+
+    <v-content>
+      <HelloWorld/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import Parallax from "vue-parallaxy";
+import HelloWorld from './components/HelloWorld'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    Parallax
+    HelloWorld
+  },
+  data () {
+    return {
+      //
+    }
   }
 }
 </script>
-
-<style>
-
-</style>
